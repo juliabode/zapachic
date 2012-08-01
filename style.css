@@ -174,14 +174,11 @@ ol.commentlist ul.children{margin:10px 0 0 15px}
 }
 .box-inner{padding: 17px; border-radius: 10px; border: 1px solid white;}
 .box img {
-  -moz-transition: box-shadow 0.3s ease-in-out 0s;
-    border: 1px solid #DDDDDD;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    display: block;
-    height: 150px;
-    margin: 0 0 10px;
-    width: 540px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 0 10px;
 }
 .box p{line-height:18px; margin:0 0 10px}
 .widget{padding:15px}

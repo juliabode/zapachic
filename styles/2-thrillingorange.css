@@ -1,0 +1,16 @@
+a{color:#e8a02c}
+a:hover{color:#e8a02c}
+.entry h2 a, .entry h1 a{color:E8A02C}
+#background{background:#534e47 url(thrillingorange/bgr.jpg) repeat-x 0 0}
+#search{background:url(thrillingorange/bgr-search.gif) no-repeat}
+#topmenu li{border-left:1px solid #dedbd1}
+#topmenu li a{color:#333}
+#topmenu li a:hover, #topmenu li.active a{color:#ff7800}
+#footer{background:#e4e2db url(thrillingorange/bgr-footer.gif) repeat-x}
+#nav li ul li{    background:#e9e4d4 url(../images/bgr-box-trans.png) repeat-x top}
+.box, .widget{background:#f7f4ea url(../images/bgr-box-trans.png) repeat-x top left}
+.box2{background:#e9e4d4}
+.box2 .spacer.white, .list2 li{background:#f7f4ea}
+.vidtabs .idTabs li a, .idTabs li a{background:#f7f4ea; color:#363636}
+span.continue-archives a{color:#e9e4d4}
+#footer, #footer a{color:#e9e4d4}

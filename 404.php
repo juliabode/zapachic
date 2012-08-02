@@ -13,7 +13,6 @@
 
       <div class="box2">
 
-        <img border="0" src="<?php bloginfo('template_directory'); ?>/images/search-trans.png" alt="search" style="padding: 6px 10px 0pt 0pt; float: left; vertical-align: middle;"/>
           <h4 style="font-size: 20px; font-weight: bold; letter-spacing: -1px;">Search the Site:</h4>
           <form id="searchform" method="get" action="<?php bloginfo('template_directory'); ?>">
           <input type="text" name="s" id="s" size="" value=""/>

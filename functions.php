@@ -657,13 +657,13 @@ add_filter('login_errors',create_function('$a', "return null;"));
 remove_action('wp_head','wp_generator');
 
 function brand_custom_init() {
-    $args = array( 'public' => true, 'label' => 'Brands', 'rewrite' => array('slug' => 'marca'), 'supports' => array('title', 'editor', 'thumbnail') );
+    $args = array( 'public' => true, 'label' => 'Brands', 'rewrite' => array('slug' => 'marca'), 'supports' => array('title', 'editor', 'thumbnail', 'comments') );
     register_post_type( 'brands', $args );
 }
 add_action( 'init', 'brand_custom_init' );
 
 function shop_custom_init() {
-    $args = array( 'public' => true, 'label' => 'Shops', 'rewrite' => array('slug' => 'tienda'), 'supports' => array('title', 'editor', 'thumbnail') );
+    $args = array( 'public' => true, 'label' => 'Shops', 'rewrite' => array('slug' => 'tienda'), 'supports' => array('title', 'editor', 'thumbnail', 'comments') );
     register_post_type( 'shops', $args );
 }
 add_action( 'init', 'shop_custom_init' );

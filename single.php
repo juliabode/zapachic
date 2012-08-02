@@ -28,12 +28,6 @@
 
   <div class="post_meta">
     <div>
-      <?php if (get_option('thrill_promote') != "") { } else { ?>
-        <div class="right">
-          <h3 class="nomargin">Like My Sexy Blog Design?</h3>
-          <p><strong><a href="http://thrillingheroics.com/ThrillingTheme" title="free social media optimized WordPress theme">Get your own premium, social media optimized WordPress theme</a> developed by <a href="http://thrl.in/woo" title="">WooThemes</a> and <a href="http://www.thrillingheroics.com" title="lifestyle business online">Cody McKibben</a> / <a href="http://thrillingheroicsconsulting.com/" title="build a cash flow business online">Thrilling Heroics</a>.</strong></p>
-        </div>
-      <?php } ?>
       <h3 class="nomargin">Bookmark and Share</h3>
       <p>
       <span class="links"><div class="fb-like" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false"></div></span><span class="links" style="margin-right:7px"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_id'))); ?>">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span><span class="links"><g:plusone size="tall"></g:plusone></span><span class="links"><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>

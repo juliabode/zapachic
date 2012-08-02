@@ -546,7 +546,7 @@ if ( function_exists('register_sidebar') )
 
 // WP 3.0+ Featured Image support
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 540, 195, true ); // Normal post thumbnails
+set_post_thumbnail_size( 250, 250, true ); // Normal post thumbnails
 add_image_size( 'single-post-thumbnail', 150, 150 ); // Permalink thumbnail size
 
 // WP 3.0+ Custom Menu support
@@ -634,9 +634,6 @@ function comment_count( $count ) {
 
 
 
-// Custom fields
-require_once ($functions_path . '/custom.php');
-
 /** Get a TinyUrl
  * @author: René Ade
  * @link: http://www.rene-ade.de/inhalte/php-code-zum-erstellen-einer-tinyurl-ueber-tinyurl-com-api.html
@@ -660,16 +657,43 @@ add_filter('login_errors',create_function('$a', "return null;"));
 remove_action('wp_head','wp_generator');
 
 function brand_custom_init() {
-    $args = array( 'public' => true, 'label' => 'Brands', 'rewrite' => array('slug' => 'marca') );
+    $args = array( 'public' => true, 'label' => 'Brands', 'rewrite' => array('slug' => 'marca'), 'supports' => array('title', 'editor', 'thumbnail') );
     register_post_type( 'brands', $args );
 }
 add_action( 'init', 'brand_custom_init' );
 
 function shop_custom_init() {
-    $args = array( 'public' => true, 'label' => 'Shops', 'rewrite' => array('slug' => 'tienda') );
+    $args = array( 'public' => true, 'label' => 'Shops', 'rewrite' => array('slug' => 'tienda'), 'supports' => array('title', 'editor', 'thumbnail') );
     register_post_type( 'shops', $args );
 }
 add_action( 'init', 'shop_custom_init' );
 
+
+function getImageForThumb($num) {
+  global $more;
+  $more = 1;
+  $content = get_the_content();
+  $count = substr_count($content, '<img');
+  $start = 0;
+  if ($count > 0) {
+    for($i=1;$i<=$count;$i++) {
+      $imgBeg = strpos($content, '<img', $start);
+      $post = substr($content, $imgBeg);
+      $imgEnd = strpos($post, '>');
+      $postOutput = substr($post, 0, $imgEnd+1);
+      $image[$i] = $postOutput;
+      $start=$imgEnd+1;
+
+      $cleanF = strpos($image[$num],'src="')+5;
+      $cleanB = strpos($image[$num],'"',$cleanF)-$cleanF;
+      $imgThumb = urlencode(substr($image[$num],$cleanF,$cleanB));
+    }
+  } else {
+    $image[1] = '<img';
+    $imgThumb = get_bloginfo('template_url') . '/images/default_thumb.jpg';
+  }
+  if(stristr($image[$num],'<img')) { return $imgThumb; }
+  $more = 0;
+}
 
 ?>

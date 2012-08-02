@@ -18,15 +18,8 @@
   while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
 ?>
 
-      <div class="box">
+      <div class="box post-overview">
         <div class="box-inner">
-        <?php if ( get_post_meta($post->ID,'image', true) || has_post_thumbnail() ) { ?> <!-- DISPLAYS THE IMAGE URL SPECIFIED IN THE CUSTOM FIELD -->
-
-            <a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark">
-            <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail(array("class" => "post_thumbnail")); } elseif (get_post_meta($post->ID, 'image', true) ) {?>
-<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo get_post_meta($post->ID, "image", $single = true); ?>&amp;h=195&amp;w=540&amp;zc=1&amp;q=95" alt="<?php the_title(); ?>" /></a>
-
-    <?php } else {} } ?>
 
         <h2><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
@@ -35,14 +28,39 @@
             <p class="fr"><?php the_category(', ') ?></p>
         </div>
 
-        <div class="entry">
-            <?php if (function_exists('digg_this_button')) { ?><div style="float: left;"><?php digg_this_button(); ?></div><?php } ?>
-          <?php the_excerpt(); ?>
+        <div>
+          <div class="img left">
+            <a href="<?php the_permalink() ?>">
+
+              <?php if ( has_post_thumbnail() ) {
+                      the_post_thumbnail();
+                    } else { ?>
+
+                      <?php
+
+                           $_thumb = sprintf('<img src="%s/thumb.php?src=%s&amp;w=240&amp;h=240&amp;zc=1" alt="%s" height="240" width="240">',
+                                  get_bloginfo('template_directory'),
+                                  getImageForThumb('1'),
+                                  get_the_title($_post_id)
+                                );
+
+                        ?>
+                <?php print($_thumb); ?>
+              <?php } ?>
+            </a>
+
+          </div>
+
+          <div class="entry">
+              <?php if (function_exists('digg_this_button')) { ?><div style="float: left;"><?php digg_this_button(); ?></div><?php } ?>
+            <?php the_excerpt(); ?>
+          </div>
         </div>
 
         <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Read this article…</a></span>
 
         </div>
+
       </div>
   <?php endwhile; ?>
 

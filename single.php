@@ -14,12 +14,6 @@
         <div class="post box" id="post-<?php the_ID(); ?>">
           <div class="box-inner">
 
-          <?php if ( get_post_meta($post->ID,'image', true) ) { ?> <!-- DISPLAYS THE IMAGE URL SPECIFIED IN THE CUSTOM FIELD -->
-
-                  <a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo get_post_meta($post->ID, "image", $single = true); ?>&amp;h=195&amp;w=540&amp;zc=1&amp;q=95" alt="<?php the_title(); ?>" /></a>
-
-          <?php } ?>
-
           <h2><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
                     <div class="date-comments">
                         <p class="fl">Written by <?php the_author_link(); ?><?php edit_post_link('Edit This Post!', ' | ', ''); ?></p>

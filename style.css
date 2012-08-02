@@ -37,6 +37,9 @@ input, select, textarea{border:#cacaca 1px solid; font-size:12px; padding:5px}
 select{padding:0}
 li{list-style:none}
 
+.left {float: left;}
+.right {float: right;}
+
 #top {
   background: none repeat scroll 0 0 #444444;
   clear: both;
@@ -182,6 +185,15 @@ ol.commentlist ul.children{margin:10px 0 0 15px}
 }
 .box p{line-height:18px; margin:0 0 10px}
 .widget{padding:15px}
+
+.box.post-overview {
+  overflow: auto;
+  width: 100%;
+}
+
+.box.post-overview .img {
+  margin-right: 15px;
+}
 
 .box2 {
     margin: 0 0 15px;

@@ -89,7 +89,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
   <div id="header">
         <?php if ( get_option('thrill_logo') <> "" ) { ?>
-          <h1 class="grid_8" onclick="location.href='<?php echo get_option('home'); ?>'" onmouseover="style.cursor='pointer'"><a href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"></a></h1><span class="tagline"><?php bloginfo('description') ?></span>
+          <h1 class="grid_8" onclick="location.href='<?php echo get_option('home'); ?>'" onmouseover="style.cursor='pointer'"><img src="<?php echo get_option('thrill_logo') ?>" /></h1><
         <?php } else { ?>
           <h1 class="grid_8"><a href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"><?php if ( get_option('thrill_title1') <> "" ) { ?><?php echo stripslashes(htmlspecialchars(get_option('thrill_title1'))); ?><span><?php echo stripslashes(htmlspecialchars(get_option('thrill_title2'))); ?></span><?php } else { echo bloginfo('name'); } ?></a></h1>
         <?php } ?>

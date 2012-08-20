@@ -24,7 +24,7 @@
         <h2><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
         <div class="date-comments">
-            <p class="fl"><span class="comments"><?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></span><?php edit_post_link('Edit This Post!', ' | ', ''); ?></p>
+            <p class="fl"><span class="comments"><?php comments_popup_link('Comenta', '1 Comentario', '% Comentarios'); ?></span><?php edit_post_link('Editar!', ' | ', ''); ?></p>
             <p class="fr"><?php the_category(', ') ?></p>
         </div>
 
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Read this article…</a></span>
+        <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Seguir leyendo…</a></span>
 
         </div>
 

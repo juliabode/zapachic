@@ -74,16 +74,11 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
 <div id="background">
 
-<div id="top" class="container_16">
-
-  <div class="grid_12">
-
-  <?php mytheme_nav1(); ?>
+  <div id="top" class="container_16">
+    <div class="grid_12">
+      <?php zapachic_top_nav(); ?>
+    </div>
   </div>
-  <!-- end .grid_12 -->
-
-</div>
-<!--/top-->
 
 <div id="page" class="container_16">
 
@@ -111,16 +106,22 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
 
 <div class="separator"></div>
-  <div id="topmenu">
 
-  <?php mytheme_nav2(); ?>
+<div id="topmenu">
 
-    <ul>
-      <?php if (get_option('thrill_facebook') != "") { ?><li class="fb"><a href="<?php echo stripslashes(htmlspecialchars(get_option('thrill_facebook'))); ?>"><img style="border: 0; padding: 0; margin: 0; vertical-align: middle;" src="http://www.google.com/s2/favicons?domain=www.facebook.com" alt="" /> Join the Community</a></li><?php } ?>
-    </ul>
+  <?php zapachich_bottom_nav(); ?>
+
+  <ul><?php if (get_option('thrill_facebook') != "") { ?>
+    <li class="fb">
+      <a href="<?php echo stripslashes(htmlspecialchars(get_option('thrill_facebook'))); ?>">
+        <img style="border: 0; padding: 0; margin: 0; vertical-align: middle;" src="http://www.google.com/s2/favicons?domain=www.facebook.com" alt="" /> Join the Community
+      </a>
+    </li><?php } ?>
+  </ul>
 
 
-  </div>
+</div>
+
 <div class="separator margin-bottom-20"></div>
     <!--/topmenu-->
 

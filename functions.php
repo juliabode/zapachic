@@ -549,42 +549,6 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 250, 250, true ); // Normal post thumbnails
 add_image_size( 'single-post-thumbnail', 150, 150 ); // Permalink thumbnail size
 
-// WP 3.0+ Custom Menu support
-function register_my_menus() {
-register_nav_menus(
-array(
-'top-menu' => __( 'Top Nav Menu' ),
-'bottom-menu' => __( 'Bottom Nav Menu' ))
-);
-}
-add_action( 'init', 'register_my_menus' );
-
-function mytheme_nav1() {
-    if ( function_exists( 'wp_nav_menu' ) )
-    wp_nav_menu( 'menu=top_menu&theme_location=top-menu&container=&menu_class=nav1&depth=1&fallback_cb=mytheme_nav_fallback1' );
-    else
-        mytheme_nav_fallback1();
-}
-
-function mytheme_nav_fallback1() {
-    wp_page_menu( 'show_home=Home&container=&menu_class=nav1&sort_column=menu_order&title_li=&depth=1' );
-}
-
-function mytheme_nav2() {
-    if ( function_exists( 'wp_nav_menu' ) )
-    wp_nav_menu( 'menu=bottom_menu&theme_location=bottom-menu&container=&menu_id=nav&menu_class=grid_15&fallback_cb=mytheme_nav_fallback2' );
-    else
-        mytheme_nav_fallback2();
-}
-
-function mytheme_nav_fallback2() { ?>
-    <ul id="nav" class="grid_15">
-      <?php wp_list_categories('title_li=&exclude=1&orderby=count&order=DESC&limit=7') ?>
-            <li>&nbsp;</li>
-    </ul>
-      <?php }
-
-
 
 
 // Comment support in new & old WP
@@ -696,14 +660,54 @@ function getImageForThumb($num) {
   $more = 0;
 }
 
+/* Clean-up */
+
+/* Display all post types on homepage */
+
 add_filter( 'pre_get_posts', 'get_custom_posts' );
 
 function get_custom_posts( $query ) {
 
-  if ( is_home() && $query->is_main_query() )
+  if ( is_home() && $query->is_main_query() ) {
     $query->set( 'post_type', array( 'post', 'brands', 'shops' ) );
+  }
 
   return $query;
+}
+
+/* Custom Menu */
+
+add_action( 'init', 'register_my_menus' );
+
+function register_my_menus() {
+
+  register_nav_menus( array(
+      'top-menu'    => __( 'Top Nav Menu' ),
+      'bottom-menu' => __( 'Bottom Nav Menu' ) )
+  );
+
+}
+
+function zapachic_top_nav() {
+
+  wp_nav_menu( array(
+    menu           => 'top_menu',
+    theme_location => 'top-menu',
+    menu_class     => 'nav1',
+    depth          => 1 )
+  );
+
+}
+
+function zapachich_bottom_nav() {
+
+  wp_nav_menu( array(
+    menu           => 'bottom_menu',
+    theme_location => 'bottom-menu',
+    menu_id        => 'nav',
+    menu_class     => 'grid_15' )
+  );
+
 }
 
 ?>

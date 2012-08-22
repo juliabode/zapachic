@@ -65,7 +65,7 @@ li{list-style:none}
   padding-top: 13px;
 }
 .nav1 li.active a, .nav1 li a:hover, .nav1 li.current_page_item a {
-  color: #FFFFFF;
+  color: #C03071;
   font-size: 13px;
   padding-top: 13px;
   text-decoration: none;
@@ -80,7 +80,7 @@ li{list-style:none}
 #topmenu{height:33px; position:relative; width:960px}
 #topmenu li{float:left; line-height:33px; display:inline}
 #topmenu li a{color:#333; display:block; margin:0 1px 0 0; padding:0 15px}
-#topmenu li a:hover, #topmenu li.active a{color:#ff7800; text-decoration:none}
+#topmenu li a:hover, #topmenu li.active a{color:#C03071; text-decoration:none}
 #topmenu li.fb{border-left:none; display:inline; float:right; line-height:33px}
 
 #nav, #nav ul{padding:0; float:left; list-style:none; display:inline}

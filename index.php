@@ -5,19 +5,7 @@
   <?php
   include(TEMPLATEPATH . '/includes/version.php');
 
-  $temp = $wp_query;
-  $wp_query = null;
-
-  $args = array(
-          'post_type' => array( 'post', 'brands', 'shops'),
-          'cat'       => $ex_vid . ',-' . $ex_aside,
-          'orderby'   => 'post_date',
-          'order'     => 'desc',
-          'paged'     => $paged
-  );
-  $wp_query = new WP_Query($args);
-  $wp_query->in_the_loop = true; // Need this for tags to work
-  while ($wp_query->have_posts()) : $wp_query->the_post(); $do_not_duplicate = $post->ID;
+  if ( have_posts() ) : while (have_posts()) : the_post(); $do_not_duplicate = $post->ID;
 ?>
 
       <div class="box post-overview">
@@ -73,7 +61,7 @@
 
     </div><!--/centercol-->
 
-<?php $wp_query = null; $wp_query = $temp;?>
+  <?php endif; ?>
 
 <?php get_sidebar(); ?>
 

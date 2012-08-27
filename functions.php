@@ -668,7 +668,7 @@ add_filter( 'pre_get_posts', 'get_custom_posts' );
 
 function get_custom_posts( $query ) {
 
-  if ( is_home() && $query->is_main_query() ) {
+  if ( (is_home() || is_archive()) && $query->is_main_query() ) {
     $query->set( 'post_type', array( 'post', 'brands', 'shops' ) );
   }
 

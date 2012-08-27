@@ -24,7 +24,7 @@
 
       <?php while (have_posts()) : the_post(); ?>
 
-      <div class="post box" id="post-<?php the_ID(); ?>">
+      <div class="post-overview box" id="post-<?php the_ID(); ?>">
         <div class="box-inner">
 
                 <h2><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -34,10 +34,30 @@
                     <p class="fr"><span class="comments"></span><?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></p>
               </div>
 
-            <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail(array("class" => "post_thumbnail")); } elseif (get_post_meta($post->ID, 'image', true) ) {?>
-<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo get_post_meta($post->ID, "image", $single = true); ?>&amp;h=195&amp;w=540&amp;zc=1&amp;q=95" alt="<?php the_title(); ?>" class="fl" style="margin-top:5px;" /></a>
 
-    <?php } else {} ?>
+        <div>
+          <div class="img left">
+            <a href="<?php the_permalink() ?>">
+
+              <?php if ( has_post_thumbnail() ) {
+                      the_post_thumbnail();
+                    } else { ?>
+
+                      <?php
+
+                           $_thumb = sprintf('<img src="%s/thumb.php?src=%s&amp;w=240&amp;h=240&amp;zc=1" alt="%s" height="240" width="240">',
+                                  get_bloginfo('template_directory'),
+                                  getImageForThumb('1'),
+                                  get_the_title($_post_id)
+                                );
+
+                        ?>
+                <?php print($_thumb); ?>
+              <?php } ?>
+            </a>
+
+          </div>
+        </div>
 
                 <?php include(TEMPLATEPATH . '/includes/version.php'); ?>
                 <p><?php echo strip_tags(get_the_excerpt(), '<a><strong>'); ?></p>

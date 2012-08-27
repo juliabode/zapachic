@@ -114,7 +114,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
   <ul><?php if (get_option('thrill_facebook') != "") { ?>
     <li class="fb">
       <a href="<?php echo stripslashes(htmlspecialchars(get_option('thrill_facebook'))); ?>">
-        <img style="border: 0; padding: 0; margin: 0; vertical-align: middle;" src="http://www.google.com/s2/favicons?domain=www.facebook.com" alt="" /> Join the Community
+        <img style="border: 0; padding: 0; margin: 0; vertical-align: middle;" src="http://www.google.com/s2/favicons?domain=www.facebook.com" alt="" /> <?php _e('Join the Community', 'Zapachic'); ?>
       </a>
     </li><?php } ?>
   </ul>

@@ -5,15 +5,15 @@
       <div class="box">
         <div class="box-inner">
 
-          <h3><em>Error 404 |</em> Page Not Found!</h3>
-          <div>Sorry, but the page you were looking for is not here. But, we're glad you're here! Please try searching the site archives below.</div>
+          <h3><em><?php _e('Error 404', 'Zapachic'); ?> | </em><?php _e('Page Not Found!', 'Zapachic'); ?></h3>
+          <div><?php _e("Sorry, but the page you were looking for is not here. But, we're glad you're here! Please try searching the site archives below.", 'Zapachic'); ?></div>
         </div>
       </div><!--/box-->
 
 
       <div class="box2">
 
-          <h4 style="font-size: 20px; font-weight: bold; letter-spacing: -1px;">Search the Site:</h4>
+          <h4 style="font-size: 20px; font-weight: bold; letter-spacing: -1px;"><?php _e('Search the Site:', 'Zapachic'); ?></h4>
           <form id="searchform" method="get" action="<?php bloginfo('template_directory'); ?>">
           <input type="text" name="s" id="s" size="" value=""/>
           <input type="submit" style="cursor: pointer;" value="Search" onmouseover="style.cursor='pointer'"/>
@@ -24,13 +24,13 @@
       <div class="arclist box">
         <div class="box-inner">
 
-        <h2>The Last 30 Posts</h2>
+        <h2><?php _e('The Last 30 Posts', 'Zapachic'); ?></h2>
 
         <ul>
           <?php query_posts('showposts=30'); ?>
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                        <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a> - <?php the_time('j F Y') ?> - <?php echo $post->comment_count ?> comments</li>
+                        <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a> - <?php the_time('j F Y') ?> - <?php echo $post->comment_count ?> <?php _e('comments', 'Zapachic'); ?></li>
 
                     <?php endwhile; endif; ?>
         </ul>

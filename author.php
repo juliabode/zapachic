@@ -17,7 +17,7 @@
 
                 <div cass="author_info">
 
-                  <h3><em>Author Archives |</em> <?php echo $curauth->nickname; ?></h3>
+                  <h3><em><?php _e('Author Archives', 'Zapachic'); ?> |</em> <?php echo $curauth->nickname; ?></h3>
 
                   <div class="fix"></div>
 
@@ -31,7 +31,7 @@
                     <?php  if ( $usegravatar ) { ?><span class="author_photo"><img src="<?php echo $grav_url; ?>" width="48" height="48" alt="" /></span><?php } ?>
                     <p><?php echo $curauth->nickname; ?> - who has written <?php the_author_posts(); ?> posts on <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a>.</p>
                     <p><?php echo $curauth->description; ?> <br style="clear:both;" /></p>
-                    <p class="author_email"><a href="mailto:<?php echo $curauth->user_email; ?>">Contact the author</a></p>
+                    <p class="author_email"><a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e('Contact the author', 'Zapachic'); ?></a></p>
                 </div>
         </div>
       </div><!--/box-->
@@ -44,7 +44,7 @@
 
                     <div class="date-comments">
                         <p class="fl"><?php the_time('j F Y'); ?></p>
-                        <p class="fr"><span class="comments"></span><?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></p>
+                        <p class="fr"><span class="comments"></span><?php comments_popup_link(__('0 Comments', 'Zapachic'), __('1 Comment', 'Zapachic'), __('% Comments', 'Zapachic')); ?></p>
                     </div>
 
             <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail(array("class" => "post_thumbnail")); } elseif (get_post_meta($post->ID, 'image', true) ) {?>
@@ -55,7 +55,7 @@
                     <p><?php echo strip_tags(get_the_excerpt(), '<a><strong>'); ?></p>
 
 
-                    <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Continue reading...</a></span>
+                    <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>"><?php _e('Continue reading...', 'Zapachic'); ?></a></span>
 
                   </div>
                 </div><!--/post-->
@@ -64,8 +64,8 @@
     <?php endwhile; ?>
 
     <div class="box2 navigation">
-      <div class="alignleft"><?php next_posts_link('&laquo; Previous Entries') ?></div>
-      <div class="alignright"><?php previous_posts_link('Next Entries &raquo;') ?></div>
+      <div class="alignleft"><?php next_posts_link( _e('&laquo; Previous Entries', 'Zapachic') ) ?></div>
+      <div class="alignright"><?php previous_posts_link( _e('Next Entries &raquo;', 'Zapachic') ) ?></div>
     </div>
 
   <?php endif; ?>

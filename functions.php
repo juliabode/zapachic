@@ -19,6 +19,12 @@ h2 { margin-bottom: 20px; }
 </style>
 <?php }
 
+add_action('after_setup_theme', 'my_theme_setup');
+
+function my_theme_setup(){
+    load_theme_textdomain( 'Zapachic', get_template_directory() );
+}
+
 // VARIABLES
 
 $themename = "Thrilling Theme";
@@ -682,8 +688,8 @@ add_action( 'init', 'register_my_menus' );
 function register_my_menus() {
 
   register_nav_menus( array(
-      'top-menu'    => __( 'Top Nav Menu' ),
-      'bottom-menu' => __( 'Bottom Nav Menu' ) )
+      'top-menu'    => 'Top Nav Menu',
+      'bottom-menu' => 'Bottom Nav Menu' )
   );
 
 }

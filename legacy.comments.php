@@ -1,123 +1,123 @@
 <?php // Do not delete these lines
-	if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die ('Please do not load this page directly. Thanks!');
+  if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+    die ('Please do not load this page directly. Thanks!');
 
-	if (!empty($post->post_password)) { // if there's a password
-		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
-			?>
+  if (!empty($post->post_password)) { // if there's a password
+    if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
+      ?>
 
-			<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+      <p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'Zapachic'); ?></p>
 
-			<?php
-			return;
-		}
-	}
+      <?php
+      return;
+    }
+  }
 
-	/* This variable is for alternating comment background */
-	$oddcomment = 'alt';
+  /* This variable is for alternating comment background */
+  $oddcomment = 'alt';
 ?>
 
 <?php
-	global $bm_comments;
-	global $bm_trackbacks;
-	
-	split_comments( $comments );
+  global $bm_comments;
+  global $bm_trackbacks;
+
+  split_comments( $comments );
 ?>
 
 <!-- You can start editing here. -->
-	
+
 <?php if ($comments) : ?>
 
-	
-	<?php
-		$trackbackcounter = count( $bm_trackbacks );
-		$commentcounter = count( $bm_comments );
-	?>
 
-	<h3 class="commh2"><?php echo $commentcounter; ?> Comments For This Post <span class="calltoaction">I'd Love to Hear Yours!</span></h3>
+  <?php
+    $trackbackcounter = count( $bm_trackbacks );
+    $commentcounter = count( $bm_comments );
+  ?>
 
-	<ol class="commentlist">
+  <h3 class="commh2"><?php echo $commentcounter; ?> <?php _e("Comments For This Post <span class=\"calltoaction\">I'd Love to Hear Yours!", 'Zapachic'); ?></span></h3>
 
-	<?php foreach ($bm_comments as $comment) : ?>
+  <ol class="commentlist">
 
-		<li class="<?php echo $oddcomment; ?> <?php if(function_exists("author_highlight")) author_highlight(); ?>" id="comment-<?php comment_ID() ?>">
+  <?php foreach ($bm_comments as $comment) : ?>
 
-			<?php if (function_exists('get_avatar')) { ?>
-				<span class='gravatar'>
-				<?php echo get_avatar($comment, $size = '48', $default = $GLOBALS['defaultgravatar'] ); ?>
-				</span>
-			<?php } ?>
+    <li class="<?php echo $oddcomment; ?> <?php if(function_exists("author_highlight")) author_highlight(); ?>" id="comment-<?php comment_ID() ?>">
 
-			<cite><?php comment_author_link() ?></cite> Says:
-			<?php if ($comment->comment_approved == '0') : ?>
-			<em>Your comment is awaiting moderation.</em>
-			<?php endif; ?>
-			<br />
+      <?php if (function_exists('get_avatar')) { ?>
+        <span class='gravatar'>
+        <?php echo get_avatar($comment, $size = '48', $default = $GLOBALS['defaultgravatar'] ); ?>
+        </span>
+      <?php } ?>
 
-			<span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('j F Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','',''); ?></span>
+      <cite><?php comment_author_link() ?></cite> Says:
+      <?php if ($comment->comment_approved == '0') : ?>
+      <em><?php _e('Your comment is awaiting moderation.', 'Zapachic'); ?></em>
+      <?php endif; ?>
+      <br />
 
-			<?php comment_text() ?>
+      <span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('j F Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','',''); ?></span>
 
-		</li>
+      <?php comment_text() ?>
 
-	<?php /* Changes every other comment to a different class */
-		if ('alt' == $oddcomment) $oddcomment = '';
-		else $oddcomment = 'alt';
-	?>
+    </li>
 
-	<?php endforeach; /* end for each comment */ ?>
+  <?php /* Changes every other comment to a different class */
+    if ('alt' == $oddcomment) $oddcomment = '';
+    else $oddcomment = 'alt';
+  ?>
 
-	</ol>
+  <?php endforeach; /* end for each comment */ ?>
 
-	<?php if ( count( $bm_trackbacks ) > 0 ) { ?>
+  </ol>
 
-	<h3 class="commh2"><?php echo $trackbackcounter; ?> Trackbacks For This Post</h3>
+  <?php if ( count( $bm_trackbacks ) > 0 ) { ?>
 
-	<ol class="commentlist">
+  <h3 class="commh2"><?php echo $trackbackcounter; ?> <?php _e('Trackbacks For This Post', 'Zapachic'); ?></h3>
 
-	<?php foreach ($bm_trackbacks as $comment) : ?>
+  <ol class="commentlist">
 
-		<li class="<?php echo $oddcomment; ?> <?php if(function_exists("author_highlight")) author_highlight(); ?>" id="comment-<?php comment_ID() ?>">
+  <?php foreach ($bm_trackbacks as $comment) : ?>
 
-			<cite><?php comment_author_link() ?></cite> Says:
-			<?php if ($comment->comment_approved == '0') : ?>
-			<em>Your comment is awaiting moderation.</em>
-			<?php endif; ?>
-			<br />
+    <li class="<?php echo $oddcomment; ?> <?php if(function_exists("author_highlight")) author_highlight(); ?>" id="comment-<?php comment_ID() ?>">
 
-			<small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('e','',''); ?></small>
+      <cite><?php comment_author_link() ?></cite> Says:
+      <?php if ($comment->comment_approved == '0') : ?>
+      <em><?php _e('Your comment is awaiting moderation.', 'Zapachic'); ?></em>
+      <?php endif; ?>
+      <br />
 
-			<?php comment_text() ?>
+      <small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('e','',''); ?></small>
 
-		</li>
+      <?php comment_text() ?>
 
-	<?php /* Changes every other comment to a different class */
-		if ('alt' == $oddcomment) $oddcomment = '';
-		else $oddcomment = 'alt';
-	?>
+    </li>
 
-	<?php endforeach; /* end for each comment */ ?>
+  <?php /* Changes every other comment to a different class */
+    if ('alt' == $oddcomment) $oddcomment = '';
+    else $oddcomment = 'alt';
+  ?>
 
-	</ol>
+  <?php endforeach; /* end for each comment */ ?>
 
-	<?php } ?>
+  </ol>
+
+  <?php } ?>
 
  <?php else : // this is displayed if there are no comments so far ?>
 
-	<?php if ('open' == $post->comment_status) : ?>
-		<!-- If comments are open, but there are no comments. -->
+  <?php if ('open' == $post->comment_status) : ?>
+    <!-- If comments are open, but there are no comments. -->
 
-	 <?php else : // comments are closed ?>
-		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
+   <?php else : // comments are closed ?>
+    <!-- If comments are closed. -->
+    <p class="nocomments"><?php _e('Comments are closed.', 'Zapachic'); ?></p>
 
-	<?php endif; ?>
+  <?php endif; ?>
 <?php endif; ?>
 
 
 <?php if ('open' == $post->comment_status) : ?>
 
-<h3 class="commh2">Leave a Comment <span class="calltoaction">Here's Your Chance to Be Heard!</span></h3>
+<h3 class="commh2"><?php _e("Leave a Comment <span class=\"calltoaction\">Here's Your Chance to Be Heard!", 'Zapachic'); ?></span></h3>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p class="alert">You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>

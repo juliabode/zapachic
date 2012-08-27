@@ -8,16 +8,16 @@
 
             <?php if (is_category()) { ?>
 
-              <h4><span class="fl">Archive | <?php echo single_cat_title(); ?></span> <span class="fr catrss"><?php $cat_obj = $wp_query->get_queried_object(); $cat_id = $cat_obj->cat_ID; echo '<a href="'; get_category_rss_link(true, $cat, ''); echo '">RSS feed for this category</a>'; ?></span></h4>
+              <h4><span class="fl"><?php _e('Archive', 'Zapachic'); ?> | <?php echo single_cat_title(); ?></span> <span class="fr catrss"><?php $cat_obj = $wp_query->get_queried_object(); $cat_id = $cat_obj->cat_ID; echo '<a href="'; get_category_rss_link(true, $cat, ''); echo '"> ' . _e('RSS feed for this category', 'Zapachic') . '</a>'; ?></span></h4>
 
         <?php } elseif (is_day()) { ?>
-        <h4>Archive | <?php the_time('F jS, Y'); ?></h4>
+        <h4><?php _e('Archive', 'Zapachic'); ?> | <?php the_time('F jS, Y'); ?></h4>
 
         <?php } elseif (is_month()) { ?>
-        <h4>Archive | <?php the_time('F, Y'); ?></h4>
+        <h4><?php _e('Archive', 'Zapachic'); ?> | <?php the_time('F, Y'); ?></h4>
 
         <?php } elseif (is_year()) { ?>
-        <h4>Archive | <?php the_time('Y'); ?></h4>
+        <h4><?php _e('Archive', 'Zapachic'); ?> | <?php the_time('Y'); ?></h4>
         <?php } ?>
     </div>
 
@@ -31,7 +31,7 @@
 
         <div class="date-comments">
                     <p class="fl"><?php the_time('j F Y'); ?></p>
-                    <p class="fr"><span class="comments"></span><?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></p>
+                    <p class="fr"><span class="comments"></span><?php comments_popup_link(__('0 Comments', 'Zapachic'), __('1 Comment', 'Zapachic'), __('% Comments', 'Zapachic')); ?></p>
               </div>
 
 
@@ -62,15 +62,15 @@
                 <?php include(TEMPLATEPATH . '/includes/version.php'); ?>
                 <p><?php echo strip_tags(get_the_excerpt(), '<a><strong>'); ?></p>
 
-                <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Continue reading...</a></span>
+                <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>"><?php _e('Continue reading...', 'Zapachic'); ?></a></span>
         </div>
       </div><!--/post-->
 
     <?php endwhile; ?>
 
     <div class="box2 navigation">
-      <div class="alignleft"><?php next_posts_link('&laquo; Previous Entries') ?></div>
-      <div class="alignright"><?php previous_posts_link('Next Entries &raquo;') ?></div>
+      <div class="alignleft"><?php next_posts_link( _e('&laquo; Previous Entries', 'Zapachic') ); ?></div>
+      <div class="alignright"><?php previous_posts_link( _e('Next Entries &raquo;', 'Zapachic') ); ?></div>
     </div>
 
   <?php endif; ?>

@@ -4,7 +4,7 @@
     die ('Please do not load this page directly. Thanks!');
 
   if ( post_password_required() ) { ?>
-    <p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+    <p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'Zapachic'); ?></p>
   <?php
     return;
   }
@@ -15,7 +15,7 @@
 
 <?php if ( have_comments() ) : ?>
         <?php if ( ! empty($comments_by_type['comment']) ) : ?>
-          <h3 class="commh2"><?php comments_number();?> Para este artículo <span class="calltoaction">queremos escuchar el tuyo!</span></h3>
+          <h3 class="commh2"><?php comments_number();?> <?php _e("For This Post <span class=\"calltoaction\">I'd Love to Hear Yours!", 'Zapachic'); ?></span></h3>
 
   <div class="navigation">
     <div class="alignleft"><?php previous_comments_link() ?></div>
@@ -30,7 +30,7 @@
 
 
   <?php if ( ! empty($comments_by_type['pings']) ) : ?>
-  <h3 id="pings" class="commh2">Trackbacks For This Post</h3>
+  <h3 id="pings" class="commh2"><?php _e('Trackbacks For This Post', 'Zapachic'); ?></h3>
   <ol class="pinglist">
   <?php wp_list_comments('type=pings&callback=list_pings'); ?>
   </ol>
@@ -49,7 +49,7 @@
 
    <?php else : // comments are closed ?>
     <!-- If comments are closed. -->
-    <p class="nocomments">Comments are closed.</p>
+    <p class="nocomments">Comments are closed.', 'Zapachic'); ?></p>
 
   <?php endif; ?>
 <?php endif; ?>
@@ -59,32 +59,32 @@
 
 <div id="respond">
 
-<h3 class="commh2">Déjanos un comentario <span class="calltoaction">Déjanos un comentario</span></h3>
+<h3 class="commh2"><?php _e('Déjanos un comentario <span class="calltoaction">Déjanos un comentario', 'Zapachic'); ?></span></h3>
 
 <div class="cancel-comment-reply">
   <small><?php cancel_comment_reply_link(); ?></small>
 </div>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p>Debes iniciar <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">sesión</a> para dejar un comentario.</p>
+<p><?php _e('You must be', 'Zapachic'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php _e('logged in</a> to post a comment.', 'Zapachic'); ?></p>
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
 <?php if ( $user_ID ) : ?>
 
-<p>Estás dentro como <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Salir de esta cuenta">Salir de esta cuenta &raquo;</a></p>
+<p><?php _e('Logged in as', 'Zapachic'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account"><?php _e('Log out &raquo;', 'Zapachic'); ?></a></p>
 
 <?php else : ?>
 
 <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label></p>
+<label for="author"><small><?php _e('Name', 'Zapachic'); ?> <?php if ($req) _e("(required)", 'Zapachic'); ?></small></label></p>
 
 <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="email"><small>Email (tu cuenta no será publicada) <?php if ($req) echo "(required)"; ?></small></label></p>
+<label for="email"><small><?php _e('Email (will not be published)', 'Zapachic'); ?> <?php if ($req) _e("(required)", 'Zapachic'); ?></small></label></p>
 
 <p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><small>Website</small></label></p>
+<label for="url"><small><?php _e('Website', 'Zapachic'); ?></small></label></p>
 
 <?php endif; ?>
 

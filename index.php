@@ -47,7 +47,7 @@
           </div>
         </div>
 
-        <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Seguir leyendo…</a></span>
+        <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>"><?php _e('Read this article…', 'Zapachic'); ?></a></span>
 
         </div>
 
@@ -55,8 +55,8 @@
   <?php endwhile; ?>
 
     <div class="box2 navigation">
-      <div class="alignleft"><?php next_posts_link('← Older Entries') ?></div>
-      <div class="alignright"><?php previous_posts_link('Newer Entries →') ?></div>
+      <div class="alignleft"><?php next_posts_link( _e('← Older Entries', 'Zapachic') ); ?></div>
+      <div class="alignright"><?php previous_posts_link( _e('Newer Entries →', 'Zapachic') ); ?></div>
     </div>
 
     </div><!--/centercol-->

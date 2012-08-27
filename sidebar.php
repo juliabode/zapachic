@@ -5,13 +5,13 @@
 
 <div class="widget" id="subform">
 
-      <h4 style="font-size: 22px; font-weight: bold; letter-spacing: -1px;">Subscribe to <?php bloginfo('name'); ?>:</h4>
+      <h4 style="font-size: 22px; font-weight: bold; letter-spacing: -1px;"><?php _e('Subscribe to', 'Zapachic'); ?> <?php bloginfo('name'); ?>:</h4>
     <a href="<?php if ( get_option('thrill_feedburner_url') <> "" ) { echo stripslashes(htmlspecialchars(get_option('thrill_feedburner_url'))); } else { echo get_bloginfo_rss('rss2_url'); } ?>" title="Subscribe to the RSS feed"><img border="0" style="float: left; vertical-align: middle; padding-right: 10px;" src="<?php bloginfo('template_directory'); ?>/images/ico-rss-trans.png" alt="RSS"/></a>
-    <p style="padding: 5px 0pt;"><a href="<?php if ( get_option('thrill_feedburner_url') <> "" ) { echo stripslashes(htmlspecialchars(get_option('thrill_feedburner_url'))); } else { echo get_bloginfo_rss('rss2_url'); } ?>" title="Subscribe to updates via RSS">Grab the RSS feed for Free Updates!</a><br />(What's this? — <a href="http://www.youtube.com/watch?v=0klgLsSxGsU" title="RSS in Plain English" target="_blank">Learn more about RSS</a>)</p>
+    <p style="padding: 5px 0pt;"><a href="<?php if ( get_option('thrill_feedburner_url') <> "" ) { echo stripslashes(htmlspecialchars(get_option('thrill_feedburner_url'))); } else { echo get_bloginfo_rss('rss2_url'); } ?>" title="Subscribe to updates via RSS"><?php _e('Grab the RSS feed for Free Updates!', 'Zapachic'); ?></a><br />(<?php _e("What's this?", 'Zapachic'); ?> — <a href="http://www.youtube.com/watch?v=0klgLsSxGsU" title="RSS in Plain English" target="_blank"><?php _e('Learn more about RSS', 'Zapachic'); ?></a>)</p>
     <?php if ( get_option('thrill_feedburner_id') <> "" ) { ?><br style="clear: both;" />
 
     <a href="http://feedburner.google.com/fb/a/mailverify?uri=<?php $feedburner_id = get_option('thrill_feedburner_id'); echo $feedburner_id; ?>" title="Get email updates delivered to your email inbox!"><img border="0" style="float: left; vertical-align: middle; padding-right: 10px;" src="<?php bloginfo('template_directory'); ?>/images/mail-forward-trans.png" alt="subscribe"/></a>
-    <p style="padding: 5px 0pt;">OR Get blog updates sent directly to your inbox by entering your email address below:</p>
+    <p style="padding: 5px 0pt;"><?php _e('OR Get blog updates sent directly to your inbox by entering your email address below:', 'Zapachic'); ?></p>
     <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php $feedburner_id = get_option('thrill_feedburner_id'); echo $feedburner_id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="text-align: center;">
       <input type="text" name="email" style="width: 140px;"/>
       <input type="hidden" value="<?php $feedburner_id = get_option('thrill_feedburner_id'); echo $feedburner_id; ?>" name="uri"/>
@@ -24,10 +24,10 @@
     <div class="box2">
 
         <ul class="idTabs">
-          <li><a href="#feat">Featured</a></li>
-      <li><a href="#pop">Popular</a></li>
-            <li><a href="#comm">Comments</a></li>
-            <li><a href="#tagcloud">Topics</a></li>
+          <li><a href="#feat"><?php _e('Featured', 'Zapachic'); ?></a></li>
+      <li><a href="#pop"><?php _e('Popular', 'Zapachic'); ?></a></li>
+            <li><a href="#comm"><?php _e('Comments', 'Zapachic'); ?></a></li>
+            <li><a href="#tagcloud"><?php _e('Topics', 'Zapachic'); ?></a></li>
         </ul>
 
         <div class="spacer white">
@@ -72,7 +72,7 @@
   <div class="widget">
     <div class="spacer">
 
-            <h2><img src="<?php bloginfo('template_directory'); ?>/images/twitter-trans.png" style="margin: -5px 5px -5px -5px;" alt="" />Twitter Updates</h2>
+            <h2><img src="<?php bloginfo('template_directory'); ?>/images/twitter-trans.png" style="margin: -5px 5px -5px -5px;" alt="" /><?php _e('Twitter Updates', 'Zapachic'); ?></h2>
 
         <span class="author_photo" style="float: right; margin: 0 0 0 8px;"><a href="http://twitter.com/<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_id'))); ?>"><img src="<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_photo'))); ?>" width="48" height="48" alt="" /></a></span>
 
@@ -103,7 +103,7 @@
       ?>
         <br style="clear: both;" />
 
-        <h3 style="margin-top: 10px;"><a href="http://twitter.com/<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_id'))); ?>" style="color: #363636;">Follow @<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_id'))); ?> on Twitter→</a></h3>
+        <h3 style="margin-top: 10px;"><a href="http://twitter.com/<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_id'))); ?>" style="color: #363636;"><?php _e('Follow', 'Zapachic'); ?> @<?php echo stripslashes(htmlspecialchars(get_option('thrill_twit_id'))); ?> <?php _e('on Twitter', 'Zapachic'); ?>→</a></h3>
 
     </div>
   </div>
@@ -121,7 +121,7 @@
     <div class="box2">
         <div class="top"></div>
         <div class="spacer flickr">
-            <h3><a href="http://www.flickr.com/photos/<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_id'))); ?>/" title=""><span style="color:#363636">My Latest </span><span style="color:#0063DC">Flick</span><span style="color:#FF0084">r</span><span style="color:#363636"> photos</span></a></h3>
+            <h3><a href="http://www.flickr.com/photos/<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_id'))); ?>/" title=""><span style="color:#363636"><?php _e('My Latest', 'Zapachic'); ?> </span><span style="color:#0063DC">Flicker</span><span style="color:#FF0084">r</span><span style="color:#363636"> <?php _e('photos', 'Zapachic'); ?></span></a></h3>
             <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_entries'))); ?>&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_id'))); ?>"></script>
     </div><!--/spacer -->
         <div class="fix"></div>

@@ -14,7 +14,7 @@ Template Name: Sitemap
         <h2>Pages</h2>
 
         <ul>
-          <?php wp_list_pages('depth=1&sort_column=menu_order&title_li=' . __('') . '' ); ?>
+          <?php wp_list_pages('depth=1&sort_column=menu_order&title_li='); ?>
         </ul>
 
         </div>
@@ -52,7 +52,7 @@ Template Name: Sitemap
 
         <ul>
             <?php while (have_posts()) : the_post(); ?>
-            <li style="font-weight:normal !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a> - Comments (<?php echo $post->comment_count ?>)</li>
+            <li style="font-weight:normal !important;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a> - <?php _e('Comments', 'Zapachic'); ?> (<?php echo $post->comment_count ?>)</li>
             <?php endwhile;  ?>
         </ul>
 

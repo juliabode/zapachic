@@ -20,7 +20,7 @@
                     <div class="post" id="post-<?php the_ID(); ?>">
 
                         <div class="entry">
-                            <?php the_content('<span class="continue">Continue Reading</span>'); ?>
+                            <?php the_content('<span class="continue">' . _e('Continue Reading', 'Zapachic') . '</span>'); ?>
                         </div>
 
                     </div><!--/post-->

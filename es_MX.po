@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Zapachic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-27 16:16+0100\n"
+"PO-Revision-Date: 2012-08-30 18:39+0100\n"
+"Last-Translator: Julia <julia.bode@lulisaur.us>\n"
+"Language-Team: Lulisaurus\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archives.php:14
+#: 404.php:27
+msgid "The Last 30 Posts"
+msgstr "Últimos Artículos"
+
+#: archives.php:20
+#: 404.php:33
+msgid "comments"
+msgstr "comentarios"
+
+#: archives.php:32
+msgid "Categories"
+msgstr "Categorías"
+
+#: archives.php:48
+msgid "Monthly Archives"
+msgstr "Archivos por mes"
+
+#: functions.php:685
+msgid "Top Nav Menu"
+msgstr "Menú superior"
+
+#: functions.php:686
+msgid "Bottom Nav Menu"
+msgstr "Menú inferior"
+
+#: legacy.comments.php:9
+#: comments.php:7
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Este artículo está protegido. Ingresa tu password "
+
+#: legacy.comments.php:37
+msgid "Comments For This Post <span class=\"calltoaction\">I'd Love to Hear Yours!"
+msgstr "Comentarios en este artículo <span class=\"calltoaction\">queremos escuchar el tuyo!"
+
+#: legacy.comments.php:53
+#: legacy.comments.php:84
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario esta en proceso de publicación"
+
+#: legacy.comments.php:74
+#: comments.php:33
+msgid "Trackbacks For This Post"
+msgstr "Este artículo fue citado por"
+
+#: legacy.comments.php:112
+msgid "Comments are closed."
+msgstr "Comentarios están cerrados"
+
+#: legacy.comments.php:120
+msgid "Leave a Comment <span class=\"calltoaction\">Here's Your Chance to Be Heard!"
+msgstr "Deja un comentario <span class=\"calltoaction\">es tu espacio para opinar!"
+
+#: footer.php:9
+msgid "Copyright"
+msgstr "Copyright"
+
+#: header.php:117
+msgid "Join the Community"
+msgstr "únete a la comunidad"
+
+#: comments.php:18
+msgid "For This Post <span class=\"calltoaction\">I'd Love to Hear Yours!"
+msgstr "Para este artículo <span class=\"calltoaction\">queremos escuchar el tuyo!"
+
+#: comments.php:62
+msgid "Déjanos un comentario <span class=\"calltoaction\">Déjanos un comentario"
+msgstr "Déjanos un comentario <span class=\"calltoaction\">Déjanos un comentario"
+
+#: comments.php:69
+msgid "You must be"
+msgstr "Debes iniciar"
+
+#: comments.php:69
+msgid "logged in</a> to post a comment."
+msgstr "sesión</a> para dejar un comentario."
+
+#: comments.php:76
+msgid "Logged in as"
+msgstr "Estás dentro como"
+
+#: comments.php:76
+msgid "Log out &raquo;"
+msgstr "Salir de esta cuenta &raquo;"
+
+#: comments.php:81
+msgid "Name"
+msgstr "Nombre"
+
+#: comments.php:81
+#: comments.php:84
+msgid "(required)"
+msgstr "(requerido)"
+
+#: comments.php:84
+msgid "Email (will not be published)"
+msgstr "Email (tu cuenta no será publicada)"
+
+#: comments.php:87
+msgid "Website"
+msgstr "Página web"
+
+#: search.php:8
+msgid "Search Results for"
+msgstr "Resultados de tu búsqueda:"
+
+#: search.php:8
+#, php-format
+msgid "'%s'"
+msgstr "'%s'"
+
+#: search.php:20
+#: archive.php:34
+#: author.php:47
+msgid "0 Comments"
+msgstr "0 Comentarios"
+
+#: search.php:20
+#: archive.php:34
+#: author.php:47
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: search.php:20
+#: archive.php:34
+#: author.php:47
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: search.php:31
+#: archive.php:65
+#: author.php:58
+msgid "Continue reading..."
+msgstr "Seguir leyendo…"
+
+#: search.php:39
+#: archive.php:72
+#: author.php:67
+msgid "&laquo; Previous Entries"
+msgstr "&laquo; Entradas Anteriores"
+
+#: search.php:40
+#: archive.php:73
+#: author.php:68
+msgid "Next Entries &raquo;"
+msgstr "Próximas Entradas &raquo;"
+
+#: search.php:48
+msgid "Search Results"
+msgstr "Resultados de búsqueda"
+
+#: search.php:48
+msgid "None Found!"
+msgstr "No se hemos encontrado nada!"
+
+#: search.php:49
+msgid "Sorry! Your search yielded no results. Please search again."
+msgstr "Lo sentimos! Tu búsqueda no ha tenido resultados, inténtalo de nuevo."
+
+#: search.php:57
+#: 404.php:16
+msgid "Search the Site:"
+msgstr "Busca en la página:"
+
+#: single.php:31
+msgid "Bookmark and Share"
+msgstr "Comparte este artículo!"
+
+#: single.php:38
+msgid "Posted on"
+msgstr "Publicado en"
+
+#: single.php:43
+msgid "Related Articles"
+msgstr "Artículos Relacionados"
+
+#: single.php:53
+msgid "About the Author"
+msgstr "Sobre la autora"
+
+#: archive.php:11
+#: archive.php:14
+#: archive.php:17
+#: archive.php:20
+msgid "Archive"
+msgstr "Archivo"
+
+#: archive.php:11
+msgid "RSS feed for this category"
+msgstr "Rss para esta categoría"
+
+#: sidebar.php:8
+msgid "Subscribe to"
+msgstr "Suscríbete a"
+
+#: sidebar.php:10
+msgid "Grab the RSS feed for Free Updates!"
+msgstr "Inscríbete por RSS para recibir las noticias!"
+
+#: sidebar.php:10
+msgid "What's this?"
+msgstr "Qué es esto?"
+
+#: sidebar.php:10
+msgid "Learn more about RSS"
+msgstr "Aprende más sobre RSS"
+
+#: sidebar.php:14
+msgid "OR Get blog updates sent directly to your inbox by entering your email address below:"
+msgstr "O puedes recibir las noticias directamente en tu mail, déjanos tu dirección:"
+
+#: sidebar.php:27
+msgid "Featured"
+msgstr "Nuevos"
+
+#: sidebar.php:28
+msgid "Popular"
+msgstr "Populares"
+
+#: sidebar.php:29
+msgid "Comments"
+msgstr "Comentarios"
+
+#: sidebar.php:30
+msgid "Topics"
+msgstr "Temas"
+
+#: sidebar.php:75
+msgid "Twitter Updates"
+msgstr "Twitter "
+
+#: sidebar.php:106
+msgid "Follow"
+msgstr "Seguir"
+
+#: sidebar.php:106
+msgid "on Twitter"
+msgstr "en Twitter"
+
+#: sidebar.php:124
+msgid "My Latest"
+msgstr "Últimos"
+
+#: sidebar.php:124
+msgid "photos"
+msgstr "fotos"
+
+#: author.php:20
+msgid "Author Archives"
+msgstr "Archivo por Autor"
+
+#: author.php:34
+msgid "Contact the author"
+msgstr "Contacta al autor"
+
+#: 404.php:8
+msgid "Error 404"
+msgstr "Error 404"
+
+#: 404.php:8
+msgid "Page Not Found!"
+msgstr "Página no encontrada"
+
+#: 404.php:9
+msgid "Sorry, but the page you were looking for is not here. But, we're glad you're here! Please try searching the site archives below."
+msgstr "Vaya! parece que la página que buscas no está disponible. Pero nos gustaría mucho que intentaras en alguno de estos archivos:"
+
+#: index.php:50
+msgid "Read this article…"
+msgstr "Seguir leyendo…"
+
+#: index.php:58
+msgid "← Older Entries"
+msgstr "← Entradas Anteriores"
+
+#: index.php:59
+msgid "Newer Entries →"
+msgstr "Entradas Recientes →"
+
+#: page.php:23
+msgid "Continue Reading"
+msgstr "Seguir leyendo"
+

@@ -280,7 +280,14 @@ span.tags{background:url(images/ico-tags-trans.png) no-repeat left; padding:1px 
 }
 .entry blockquote{padding:0px 10px; margin:5px auto 15px auto; width:85%; color:#777; font-family:"Times New Roman",Times,serif; font-style:italic}
 .entry blockquote p{font-size:15px; padding:5px 0px; margin:5px 0px; line-height:20px}
-.entry img{padding:2px 2px 2px 2px; border:none; max-width:540px}
+
+.entry img {
+  padding: 2px 2px 2px 2px;
+  border: none;
+  max-width: 650px;
+  margin: 15px auto;
+}
+
 .entry img.wp-smiley{padding:0; margin:0; background:none; border:none}
 
 .entry img.alignleft{margin:0 5px 0 0}
@@ -317,7 +324,7 @@ img.center, .wp-caption-text{text-align:center !important}
 .post_meta .links img{vertical-align:middle; border:none !important; margin:0px}
 .post_meta ul, .author_info li{margin:0px; padding:0px}
 .adblocks{background:#F8F8F4 none repeat scroll 0 0; border:1px solid #DEDBD1; padding:18px !important; margin-bottom:10px}
-.center, .aligncenter{text-align:center !important; margin:0 auto !important}
+.center, .aligncenter{text-align:center; margin:0 auto;}
 
 .author_photo{float:left; margin-right:10px; width:58px; display:inline}
 .author_photo img{background-color:#FFF; border:1px solid #CCC; display:inline; float:left; height:48px; padding:4px; width:48px; display:inline}

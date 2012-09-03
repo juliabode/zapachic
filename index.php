@@ -55,8 +55,8 @@
   <?php endwhile; ?>
 
     <div class="box2 navigation">
-      <div class="alignleft"><?php next_posts_link( _e('← Older Entries', 'Zapachic') ); ?></div>
-      <div class="alignright"><?php previous_posts_link( _e('Newer Entries →', 'Zapachic') ); ?></div>
+      <div class="alignleft"><?php next_posts_link( __('← Older Entries', 'Zapachic') ); ?></div>
+      <div class="alignright"><?php previous_posts_link( __('Newer Entries →', 'Zapachic') ); ?></div>
     </div>
 
     </div><!--/centercol-->

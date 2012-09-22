@@ -3,6 +3,7 @@
   <?php include('ads/ads-management.php'); ?>
 
 
+<!--
 <div class="widget" id="subform">
 
       <h4 style="font-size: 22px; font-weight: bold; letter-spacing: -1px;"><?php _e('Subscribe to', 'Zapachic'); ?> <?php bloginfo('name'); ?>:</h4>
@@ -18,49 +19,8 @@
       <input type="hidden" name="loc" value="en_US"/>
       <input type="submit" value="Subscribe" onmouseover="style.cursor='pointer'" style="margin: 5px; cursor: pointer;"/>
     </form><?php } else {} ?>
-  </div><!--/widget-->
+  </div>--><!--/widget-->
 
-
-    <div class="box2">
-
-        <ul class="idTabs">
-          <li><a href="#feat"><?php _e('Featured', 'Zapachic'); ?></a></li>
-      <li><a href="#pop"><?php _e('Popular', 'Zapachic'); ?></a></li>
-            <li><a href="#comm"><?php _e('Comments', 'Zapachic'); ?></a></li>
-            <li><a href="#tagcloud"><?php _e('Topics', 'Zapachic'); ?></a></li>
-        </ul>
-
-        <div class="spacer white">
-
-      <ul class="list1" id="feat">
-        <?php
-          include(TEMPLATEPATH . '/includes/version.php');
-          $the_query = new WP_Query('cat=' . $ex_feat  . '&showposts=10&orderby=post_date&order=desc');
-          while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
-        ?>
-
-          <li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></li>
-
-        <?php endwhile; ?>
-      </ul>
-
-            <ul class="list1" id="pop">
-                <?php include(TEMPLATEPATH . '/includes/popular.php' ); ?>
-            </ul>
-
-      <ul class="list1" id="comm">
-                <?php include(TEMPLATEPATH . '/includes/comments.php' ); ?>
-      </ul>
-
-            <div class="list1" id="tagcloud">
-                <?php wp_tag_cloud('smallest=10&largest=22'); ?>
-            </div>
-
-        </div>
-        <!--/spacer -->
-
-    </div>
-    <!--/box2 -->
 
 
 <div id="adsection">
@@ -150,6 +110,47 @@
     <?php endif; ?>
 
   </div><!--/grid_3 omega-->
+
+<div class="list1" id="tagcloud">
+<?php wp_tag_cloud('smallest=10&largest=22'); ?>
+</div>
+
+<div class="box2">
+
+<ul class="idTabs">
+<li><a href="#feat"><?php _e('Featured', 'Zapachic'); ?></a></li>
+<li><a href="#pop"><?php _e('Popular', 'Zapachic'); ?></a></li>
+<li><a href="#comm"><?php _e('Comments', 'Zapachic'); ?></a></li>
+<!--<li><a href="#tagcloud"><?php _e('Topics', 'Zapachic'); ?></a></li>-->
+</ul>
+
+<div class="spacer white">
+
+<ul class="list1" id="feat">
+<?php
+    include(TEMPLATEPATH . '/includes/version.php');
+    $the_query = new WP_Query('cat=' . $ex_feat  . '&showposts=10&orderby=post_date&order=desc');
+    while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+    ?>
+
+<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></li>
+
+<?php endwhile; ?>
+</ul>
+
+<ul class="list1" id="pop">
+<?php include(TEMPLATEPATH . '/includes/popular.php' ); ?>
+</ul>
+
+<ul class="list1" id="comm">
+<?php include(TEMPLATEPATH . '/includes/comments.php' ); ?>
+</ul>
+
+</div>
+<!--/spacer -->
+
+</div>
+<!--/box2 -->
 
 </div><!--/sidebar-->
 

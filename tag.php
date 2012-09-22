@@ -5,7 +5,7 @@
     <?php if (have_posts()) : ?>
 
         <div class="box2">
-          <h4><em><?php _e('Posts Tagged with', 'Zapachic'); ?></em> "<?php single_tag_title("", true); ?>"</h4>
+          <h4><em><?php _e('Artículos sobre', 'Zapachic'); ?></em> "<?php single_tag_title("", true); ?>"</h4>
         </div>
 
       <?php while (have_posts()) : the_post(); ?>
@@ -17,7 +17,7 @@
 
                 <div class="date-comments">
                     <p class="fl"><?php the_time('l, F j, Y'); ?></p>
-                    <p class="fr"><span class="comments"></span>?php comments_popup_link(__('0 Comments', 'Zapachic'), __('1 Comment', 'Zapachic'), __('% Comments', 'Zapachic')); ?></p>
+                    <p class="fr"><span class="comments"></span><?php comments_popup_link(__('0 Comments', 'Zapachic'), __('1 Comment', 'Zapachic'), __('% Comments', 'Zapachic')); ?></p>
                 </div>
 
             <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail(array("class" => "post_thumbnail")); } elseif (get_post_meta($post->ID, 'image', true) ) {?>

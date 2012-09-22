@@ -318,7 +318,7 @@ img.center, .wp-caption-text{text-align:center !important}
 .catrss{background:url(images/ico-rss.gif) center left no-repeat; padding-left:24px; line-height:16px}
 
 .navigation{}
-.navigation a{color:#666; font-weight:bold; font-size:14px}
+.navigation a{color:#666; font-size:12px}
 .alignleft{float:left}
 .alignright{float:right}
 .navigation .alignleft{width:45%}

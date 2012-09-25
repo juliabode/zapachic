@@ -1,5 +1,15 @@
 <div id="sidebar" class="grid_6">
 
+<div class="socialmedia-buttons">
+<a target="_blank" rel="nofollow" href="http://www.facebook.com/zapachic">
+<img class="bounce" title="Suis-nous sur: Facebook" alt="Síguenos en Facebook" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/facebook.png">
+</a>
+<a target="_blank" rel="nofollow" href="http://www.twitter.com/zapachic">
+<img class="bounce" title="Suis-nous sur: Twitter" alt="Síguenos en Twitter" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/twitter.png">
+</a>
+</div>
+
+
   <?php include('ads/ads-management.php'); ?>
 
 

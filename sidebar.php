@@ -2,11 +2,15 @@
 
 <div class="socialmedia-buttons">
 <a target="_blank" rel="nofollow" href="http://www.facebook.com/zapachic">
-<img class="bounce" title="Suis-nous sur: Facebook" alt="Síguenos en Facebook" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/facebook.png">
+<img class="bounce" title="Síguenos en Facebook" alt="Síguenos en Facebook" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/facebook.png">
 </a>
 <a target="_blank" rel="nofollow" href="http://www.twitter.com/zapachic">
-<img class="bounce" title="Suis-nous sur: Twitter" alt="Síguenos en Twitter" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/twitter.png">
+<img class="bounce" title="Síguenos en Twitter" alt="Síguenos en Twitter" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/twitter.png">
 </a>
+<!--
+<a rel="nofollow" href="mailto:contacto@zapachic.com">
+<img class="bounce" title="Contáctanos" alt="Contáctanos" src="<?php echo get_template_directory_uri(); ?>/images/mail-forward-trans.png">
+</a>-->
 </div>
 
 

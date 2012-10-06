@@ -8,13 +8,37 @@
 
 <?php get_header(); ?>
 
-<div id="slider">
+<div id="slider_home">
 
-<?php dynamic_sidebar( 'top_sidebar' ); ?>
+<!-- <?php dynamic_sidebar( 'top_sidebar' ); ?> -->
+
+
+
+
 
 </div>
 
 <div id="centercol" class="grid_10">
+
+<!-- MovingBoxes Slider -->
+<ul id="slider">
+
+<?php
+    global $post;
+    $args = array( 'numberposts' => 4  );
+    $myposts = get_posts( $args );
+    foreach( $myposts as $post ) :	setup_postdata($post); ?>
+
+<li>
+<a rel="bookmark" href="<?php the_permalink(); ?>">
+<img src="<?php echo catch_that_image() ?>" alt="<?php the_title(); ?>"/>  
+</a>
+<p style="height:20px;"><a rel="bookmark" href="<?php the_permalink(); ?>" style="color:#000;font-size:0.9em"><?php the_title(); ?></a></p>
+</li>
+<?php endforeach; ?>
+
+
+</ul><!-- end Slider #1 -->
 
 <?php
     include(TEMPLATEPATH . '/includes/version.php');
@@ -37,9 +61,8 @@
 
 <h2><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
-<div class="date-comments">
-<p class="fl"><span class="comments"><?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></span><?php edit_post_link('Edit This Post!', ' | ', ''); ?></p>
-<p class="fr"><?php the_category(', ') ?></p>
+<div class="date-comments" style="padding-bottom:7px;">
+
 </div>
 
 <div>
@@ -52,7 +75,7 @@
 
 <?php
     
-    $_thumb = sprintf('<img src="%s/thumb.php?src=%s&amp;w=240&amp;h=240&amp;zc=1" alt="%s" height="240" width="240">',
+    $_thumb = sprintf('<img src="%s/thumb.php?src=%s&amp;w=300&amp;h=260&amp;zc=1" alt="%s" height="260" width="300">',
                       get_bloginfo('template_directory'),
                       getImageForThumb('1'),
                       get_the_title($_post_id)

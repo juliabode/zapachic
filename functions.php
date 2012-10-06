@@ -724,5 +724,39 @@ function zapachich_bottom_nav() {
   );
 
 }
+                
+                // Get URL of first image in a post
+                function catch_that_image() {
+                    global $post, $posts;
+                    $first_img = '';
+                    ob_start();
+                    ob_end_clean();
+                    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+                    $first_img = $matches [1] [0];
+                    
+                    // no image found display default image instead
+                    if(empty($first_img)){ 
+                        $first_img = get_template_directory_uri() . "/images/default.jpg";
+                    }
+                    return $first_img;
+                }
+                
+                
+                function showAdInPost() {
+                    return '<script type="text/javascript"><!--
+                    google_ad_client = "ca-pub-0072791302442657";
+                    /* Banner interno */
+                    google_ad_slot = "5287309767";
+                    google_ad_width = 468;
+                    google_ad_height = 60;
+                    //-->
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                    ';
+                }
+                
+                add_shortcode('imagen', 'showAdInPost');
 
 ?>

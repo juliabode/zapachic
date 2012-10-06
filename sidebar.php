@@ -90,20 +90,6 @@
   <?php endif; ?>
 
 
-   <?php if (get_option('thrill_flickr_id') != "") { ?>
-
-    <div class="box2">
-        <div class="top"></div>
-        <div class="spacer flickr">
-            <h3><a href="http://www.flickr.com/photos/<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_id'))); ?>/" title=""><span style="color:#363636"><?php _e('My Latest', 'Zapachic'); ?> </span><span style="color:#0063DC">Flicker</span><span style="color:#FF0084">r</span><span style="color:#363636"> <?php _e('photos', 'Zapachic'); ?></span></a></h3>
-            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_entries'))); ?>&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=<?php echo stripslashes(htmlspecialchars(get_option('thrill_flickr_id'))); ?>"></script>
-    </div><!--/spacer -->
-        <div class="fix"></div>
-        <div class="bot"></div>
-    </div>
-    <!--/box2 -->
-
-    <?php } ?>
 
 
   <?php include('ads/ads-300x250.php'); ?>
@@ -129,13 +115,15 @@
 <?php wp_tag_cloud('smallest=10&largest=22'); ?>
 </div>
 
+<!--
 <div class="box2">
 
 <ul class="idTabs">
 <li><a href="#feat"><?php _e('Featured', 'Zapachic'); ?></a></li>
 <li><a href="#pop"><?php _e('Popular', 'Zapachic'); ?></a></li>
-<li><a href="#comm"><?php _e('Comments', 'Zapachic'); ?></a></li>
+<li><a href="#comm"><?php _e('Comments', 'Zapachic'); ?></a></li>-->
 <!--<li><a href="#tagcloud"><?php _e('Topics', 'Zapachic'); ?></a></li>-->
+<!--
 </ul>
 
 <div class="spacer white">
@@ -160,11 +148,13 @@
 <?php include(TEMPLATEPATH . '/includes/comments.php' ); ?>
 </ul>
 
-</div>
+</div>-->
 <!--/spacer -->
-
+<!--
 </div>
+-->
 <!--/box2 -->
+
 
 </div><!--/sidebar-->
 

@@ -14,14 +14,49 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
 
+    <!-- Required CSS for slider -->
+    <link href="<?php echo get_template_directory_uri(); ?>/css/movingboxes.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <link href="<?php echo get_template_directory_uri(); ?>/css/movingboxes-ie.css" rel="stylesheet" media="screen" />
+    <![endif]-->
+
+    <!-- Required script -->
+
+    <style>
+    /* Dimensions set via css in MovingBoxes version 2.2.2+ */
+        #slider { width: 500px; }
+        #slider li { width: 250px; }
+    </style>
+
+
     <!--[if lt IE 7]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
     <style type="text/css">#header .spacer{display:none !important;visibility:hidden !important;}</style>
     <![endif]-->
 
-    <?php wp_enqueue_script('jquery'); ?>
+    
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+    
+        <?php wp_enqueue_script('jquery'); ?>
     <?php wp_head(); ?>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.movingboxes.js"></script>
+
+<script>
+jQuery(document).ready(function($){
+  
+  $('#slider').movingBoxes({
+                           /* width and panelWidth options deprecated, but still work to keep the plugin backwards compatible
+                            width: 500,
+                            panelWidth: 0.5,
+                            */
+                           startPanel   : 1,      // start with this panel
+                           wrap         : false,   // if true, the panel will "wrap" (it really rewinds/fast forwards) at the ends
+                           buildNav     : true,   // if true, navigation links will be added
+                           navFormatter : function(){ return "&#9679;"; } // function which returns the navigation text for each panel
+                           });
+  
+  });
+</script>
 
     <?php if ( get_option('thrill_tinytitle') <> "" ) { ?><style type="text/css">#header h1{font-size:46px !important; letter-spacing:-4px !important; line-height:72px !important;}</style><?php } ?>
 
@@ -50,6 +85,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 </head>
 
 <body>
+
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

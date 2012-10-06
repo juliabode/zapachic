@@ -7,7 +7,8 @@
 	top: 0;
     margin-bottom: 15px;
 	border-radius: 10px;
-	box-shadow: inset 0 0 10px #CCBB56;
+	box-shadow: inset 0 0 10px #555;
+    background-color: #ECCEEA;
 }
 
 /* Panel Wrapper */
@@ -27,7 +28,7 @@
 
 /* active slider border highlight */
 .mb-active-slider {
-	border-color: #CCBB56;
+	border-color: #555;
 }
 
 /*** Slider panel ***/
@@ -52,6 +53,7 @@ change .current class name using plugin option, currentPanel : 'current' */
 	border: 1px solid #999;
     height: 320px;
     width: 400px;
+    background-color: #fff;
 }
 
 .mb-inside * {

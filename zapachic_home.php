@@ -33,7 +33,7 @@
 <a rel="bookmark" href="<?php the_permalink(); ?>">
 <img src="<?php echo catch_that_image() ?>" alt="<?php the_title(); ?>"/>  
 </a>
-<p style="height:20px;"><a rel="bookmark" href="<?php the_permalink(); ?>" style="color:#000;font-size:0.9em"><?php the_title(); ?></a></p>
+<p style="height:20px;text-align:center;"><a rel="bookmark" href="<?php the_permalink(); ?>" style="color:#555;font-size:0.8em;"><?php the_title(); ?></a></p>
 </li>
 <?php endforeach; ?>
 

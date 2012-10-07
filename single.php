@@ -39,7 +39,7 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
-
+<div style="padding:5px;">&#160;</div>
           <div class="entry">
             <?php if (function_exists('digg_this_button')) { ?><div style="float: left;"><?php digg_this_button(); ?></div><?php } ?>
             <?php the_content('<span class="continue">Seguir leyendo</span>'); ?>

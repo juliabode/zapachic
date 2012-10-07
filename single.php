@@ -24,6 +24,8 @@
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
+<div style="padding:5px;">&#160;</div>
+
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-0072791302442657";
 /* Banner superior */

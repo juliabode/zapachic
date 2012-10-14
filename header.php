@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 
-    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+    <title><?php if( is_home() || is_front_page() ) bloginfo('name'); else wp_title(""); ?></title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 

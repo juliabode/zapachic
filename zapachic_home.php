@@ -94,7 +94,7 @@
 </div>
 </div>
 
-<span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Read this article…</a></span>
+<span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>">Sigue leyendo…</a></span>
 
 </div>
 
@@ -102,11 +102,14 @@
 <?php endwhile; ?>
 
 <div class="box2 navigation">
-<div class="alignleft"><?php next_posts_link('← Older Entries') ?></div>
-<div class="alignright"><?php previous_posts_link('Newer Entries →') ?></div>
+<div class="alignleft"><?php next_posts_link('← Older Entries',0) ?></div>
+<div class="alignright"><?php previous_posts_link('Newer Entries →',0) ?></div>
 </div>
 
+
 </div><!--/centercol-->
+
+
 
 <?php get_sidebar(); ?>
 

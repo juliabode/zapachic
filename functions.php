@@ -631,6 +631,7 @@ if ( !function_exists('fb_gettinyurl') ) {
     return $url;
   }
 }
+                
 
 add_filter('login_errors',create_function('$a', "return null;"));
 remove_action('wp_head','wp_generator');
@@ -741,22 +742,7 @@ function zapachich_bottom_nav() {
                     return $first_img;
                 }
                 
-                
-                function showAdInPost() {
-                    return '<script type="text/javascript"><!--
-                    google_ad_client = "ca-pub-0072791302442657";
-                    /* Banner interno */
-                    google_ad_slot = "5287309767";
-                    google_ad_width = 468;
-                    google_ad_height = 60;
-                    //-->
-                    </script>
-                    <script type="text/javascript"
-                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
-                    ';
-                }
-                
-                add_shortcode('imagen', 'showAdInPost');
+            
+
 
 ?>

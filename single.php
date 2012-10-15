@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
     <div id="centercol" class="grid_10">
 
     <?php if (have_posts()) : ?>

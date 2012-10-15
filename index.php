@@ -47,7 +47,7 @@
           </div>
         </div>
 
-        <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>"><?php _e('Read this article…', 'Zapachic'); ?></a></span>
+        <span class="continue"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>"><?php _e('Sigue leyendo…', 'Zapachic'); ?></a></span>
 
         </div>
 

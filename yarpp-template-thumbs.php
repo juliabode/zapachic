@@ -5,7 +5,7 @@ Author: John Godley
 ?>
 
 <?php if ($related_query->have_posts()):?>
-	<h4 class="meta">You may be interested in:</h4>
+	<h4 class="meta">Te puede gustar:</h4>
 
 	<ol class="related-posts">
 		<?php while ($related_query->have_posts()) : $related_query->the_post(); ?>

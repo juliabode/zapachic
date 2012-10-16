@@ -396,3 +396,66 @@ img.center, .wp-caption-text{text-align:center !important}
 
 margin-left:15px;
 }
+
+.related-posts {
+  list-style-type: none;
+  margin: 0;
+  height: 110px;
+}
+ 
+.related-posts li {
+  padding: 0; margin: 0;
+  float: left;
+  margin-right: 5px;
+}
+ 
+.related-post {
+  position: relative;
+  padding: 3px;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+ 
+.related-post:hover {
+  border: 1px solid #999;
+}
+ 
+.related-title {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  font-size: 0.7em;
+  width: 96px;
+  margin-left: 3px;
+  opacity: 0.5;
+  padding: 1px 2px;
+  text-align: center;
+  line-height: 1.4;
+  height: 30px;
+  overflow: hidden;
+  background-color: black;
+  font-family: helvetica, arial;
+}
+ 
+.related-title a {
+  text-decoration: none;
+  color: white;
+}
+ 
+.related-thumb {
+  font-family: courier;
+  background-color: white;
+  font-size: 1.2em;
+  line-height: 1.2;
+  height: 100px;
+  overflow: hidden;
+  width: 100px;
+}
+ 
+.related-thumb a {
+  text-decoration: none;
+  color: #ddd;
+}

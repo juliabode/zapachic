@@ -700,6 +700,9 @@ function get_custom_posts( $query ) {
 
   return $query;
 }
+                
+/* YARPP Thumbnails*/
+add_image_size( 'related-thumbnail', 100, 100, true );
 
 /* Custom Menu */
 

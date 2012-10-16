@@ -313,7 +313,7 @@ img.center, .wp-caption-text{text-align:center !important}
 .entry ul li ul, .entry ol li ol{margin-bottom:0px; padding-top:3px}
 .entry ul li{list-style:disc inside !important; margin-left:15px; padding:3px 0px}
 .entry ul li ul li{list-style:circle inside !important}
-.entry ol li{list-style:decimal inside !important; font-size:12px; padding:3px 0px}
+.entry ol li{list-style:inside !important; font-size:12px; padding:3px 0px}
 .entry ol li ol li{list-style:decimal-leading-zero inside !important}
 
 .arclist ul li{color:#c0c0c0; font-size:12px; border-bottom:1px solid #f1f1ed; padding:5px 0px}

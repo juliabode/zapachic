@@ -558,6 +558,16 @@ register_sidebar(array(
             'before_title' => '<h3>',
             'after_title' => '</h3>',
             ));
+                
+register_sidebar(array(
+         'name'=> 'Bottom Sidebar',
+         'id' => 'bottom_sidebar',
+         'before_widget' => '<li id="%1$s" class="widget %2$s">',
+         'after_widget' => '</li>',
+         'before_title' => '<h3>',
+         'after_title' => '</h3>',
+));
+                
 
 // WP 3.0+ Featured Image support
 add_theme_support( 'post-thumbnails' );

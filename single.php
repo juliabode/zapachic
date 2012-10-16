@@ -92,8 +92,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div><div class="clear"></div>
 
 <div class="box2 navigation">
-<div class="alignright"><?php next_post_link('%link→') ?></div>
-<div class="alignleft"><?php previous_post_link('←%link') ?></div>
+<?php dynamic_sidebar( 'bottom_sidebar' ); ?> 
+<!--<div class="alignright"><?php next_post_link('%link→') ?></div>
+<div class="alignleft"><?php previous_post_link('←%link') ?></div>-->
 </div>
 
 

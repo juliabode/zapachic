@@ -21,7 +21,7 @@ Author: John Godley
 
 						if ( count( $attachments ) > 0 ) {
 							$img = array_shift( $attachments );
-							$img = wp_get_attachment_image( $img->ID, 'related-thumbnail', true );
+							$img = wp_get_attachment_image( $img->ID, 'thumbnail', true );
 						}
 					}
 

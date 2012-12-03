@@ -14,7 +14,7 @@ Author: John Godley
 				<?php
 					$img = '';
 					if ( has_post_thumbnail() ) {
-						$img = get_the_post_thumbnail( $post->ID, 'related-thumbnail', array( 'title' => $title, 'alt' => $title ) );
+						$img = get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'title' => $title, 'alt' => $title ) );
 					}
 					else {
 						$attachments = get_children( array('post_parent' => $post->ID, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image',  'numberposts' => 1 ) );

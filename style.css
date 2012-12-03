@@ -414,8 +414,8 @@ margin-left:15px;
   padding: 3px;
   background-color: white;
   border: 1px solid #ddd;
-  width: 100px;
-  height: 140px;
+  width: 150px;
+  height: 180px;
   overflow: hidden;
 }
  
@@ -426,8 +426,8 @@ margin-left:15px;
 .related-title {
   bottom: 3px;
   left: 0;
-  font-size: 0.7em;
-  width: 96px;
+  font-size: 1em;
+  width: 150px;
   margin-left: 3px;
   opacity: 0.5;
   padding: 1px 2px;
@@ -449,12 +449,16 @@ margin-left:15px;
   background-color: white;
   font-size: 1.2em;
   line-height: 1.2;
-  height: 100px;
+  height: 150px;
   overflow: hidden;
-  width: 100px;
+  width: 150px;
 }
  
 .related-thumb a {
   text-decoration: none;
-  color: #ddd;
+  color: #ddd;  
+}
+
+.related-thumb img {
+  margin: 0 !important;
 }

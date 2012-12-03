@@ -702,7 +702,7 @@ function get_custom_posts( $query ) {
 }
                 
 /* YARPP Thumbnails*/
-add_image_size( 'related-thumbnail', 100, 100, true );
+add_image_size( 'related-thumbnail', 150, 150, true );
 
 /* Custom Menu */
 

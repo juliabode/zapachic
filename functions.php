@@ -703,7 +703,7 @@ function get_custom_posts( $query ) {
                 
 /* YARPP Thumbnails*/
 add_image_size( 'related-thumbnail', 150, 150, true );
-
+                
 /* Custom Menu */
 
 add_action( 'init', 'register_my_menus' );

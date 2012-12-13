@@ -43,7 +43,7 @@
 <?php
     include(TEMPLATEPATH . '/includes/version.php');
     
-    $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $page = (get_query_var('page')) ? get_query_var('page') : 1;
     $args = array(
                   'post_type' => array( 'post', 'brands', 'shops'),
                   'cat' => $ex_vid . ',-' . $ex_aside,

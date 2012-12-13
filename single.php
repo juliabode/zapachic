@@ -87,7 +87,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 
 <div class="date-comments">
-<p class="fl">Escrito por <?php the_author_link(); ?><?php edit_post_link('Edit This Post!', ' | ', ''); ?></p>
+<p class="fl">Escrito por <a href="http://zapachic.com/about/"rel="author"><?php the_author_link(); ?></a><?php edit_post_link('Edit This Post!', ' | ', ''); ?></p>
 <p class="fr">Temas: <?php the_category(', ') ?></p>
 </div><div class="clear"></div>
 

@@ -7,7 +7,9 @@
 <a target="_blank" rel="nofollow" href="http://www.twitter.com/zapachic">
 <img class="bounce" title="Síguenos en Twitter" alt="Síguenos en Twitter" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/twitter.png">
 </a>
-<a href="https://plus.google.com/103492578160880982351" rel="publisher">G+</a>
+<a href="https://plus.google.com/103492578160880982351" rel="publisher">
+<img class="bounce" title="Síguenos en Google+" alt="Síguenos en Google+" src="<?php echo get_template_directory_uri(); ?>/images/social_buttons/google.png">
+</a>
 <!--
 <a rel="nofollow" href="mailto:contacto@zapachic.com">
 <img class="bounce" title="Contáctanos" alt="Contáctanos" src="<?php echo get_template_directory_uri(); ?>/images/mail-forward-trans.png">

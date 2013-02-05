@@ -18,6 +18,7 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/movingboxes.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <link href="<?php echo get_template_directory_uri(); ?>/css/movingboxes-ie.css" rel="stylesheet" media="screen" />
+    <a href="https://plus.google.com/103492578160880982351" rel="publisher">Google+</a>
     <![endif]-->
 
     <!-- Required script -->

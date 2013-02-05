@@ -13,7 +13,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
-    <link href="https://plus.google.com/103492578160880982351" rel="publisher" >
+    <a href="https://plus.google.com/103492578160880982351" rel="publisher">Google+</a>
 
     <!-- Required CSS for slider -->
     <link href="<?php echo get_template_directory_uri(); ?>/css/movingboxes.css" rel="stylesheet">
